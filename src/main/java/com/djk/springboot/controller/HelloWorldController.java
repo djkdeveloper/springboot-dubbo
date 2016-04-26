@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.djk.springboot.service.DubboService;
 
+/**
+ * controller
+ */
 @Controller
 public class HelloWorldController {
 
 	@Autowired
 	private DubboService dubboService;
 	
-
 	@RequestMapping( value = "/dubbo", method = RequestMethod.GET)
 	@ResponseBody
 	public String sayWorld(String name) {
